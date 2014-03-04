@@ -1,0 +1,268 @@
+.web_right_top{
+	width:260px;
+	height:200px;
+	position:absolute;
+	margin-top:8em;
+	margin-left:30em;
+	z-index:-21;
+	background:transparent url(../img/web/ribka_right.png) no-repeat 0 0;
+}
+
+.web_right_etc{
+	width:260px;
+	height:200px;
+	display:none;
+	position:absolute;
+	margin-top:-4em;
+	margin-left:42.5em;
+	z-index:15;
+	background:transparent url(../img/web/etc.png) no-repeat 0 0;
+}
+
+.web_right_krug{
+	width:125px;
+	height:125px;
+	position:absolute;
+	margin-top:6em;
+	margin-left:35.5em;
+	z-index:-20;
+	background:transparent url(../img/web/krug.png) no-repeat 0 0;
+	border-spacing: 0px;
+}
+
+	.web_right_puzirek_1{
+		width:260px;
+		height:200px;
+		opacity:0;
+		position:absolute;
+		margin-top:-4em;
+		margin-left:42.5em;
+		background:transparent url(../img/web/puzirek_1.png) no-repeat 0 0;
+	}
+	
+	.web_right_puzirek_2{
+		width:260px;
+		height:200px;
+		opacity:0;
+		position:absolute;
+		margin-top:-4em;
+		margin-left:42.5em;
+		background:transparent url(../img/web/puzirek_2.png) no-repeat 0 0;
+	}
+	
+	.web_right_puzirek_3{
+		width:260px;
+		height:200px;
+		opacity:0;
+		position:absolute;
+		margin-top:-4em;
+		margin-left:42.5em;
+		background:transparent url(../img/web/puzirek_3.png) no-repeat 0 0;
+	}
+	
+	.web_right_puzirek_4{
+		width:260px;
+		height:200px;
+		opacity:0;
+		position:absolute;
+		margin-top:-4em;
+		margin-left:42.5em;
+		background:transparent url(../img/web/puzirek_4.png) no-repeat 0 0;
+	}
+		
+.web_left_top{
+	width:260px;
+	height:200px;
+	position:absolute;
+	margin-top:8em;
+	margin-left:10em;
+	z-index:-21;
+	background:transparent url(../img/web/ribka_left.png) no-repeat 0 0;
+}	
+
+.web_left_etc{
+	width:260px;
+	height:200px;
+	position:absolute;
+	display:none;
+	margin-top:-4em;
+	margin-left:-2em;
+	z-index:-21;
+	background:transparent url(../img/web/etc_l.png) no-repeat 0 0;
+}
+
+.web_left_obruch{
+	width:145px;
+	height:120px;
+	position:absolute;
+	margin-top:2em;
+	margin-left:4em;
+	z-index:-20;
+	background:transparent url(../img/web/obruch.png) no-repeat 0 0;
+	border-spacing: 0px;
+}
+
+	.web_left_puzirek_1{
+		width:260px;
+		height:200px;
+		opacity:0;
+		position:absolute;
+		margin-top:-4em;
+		margin-left:-2em;
+		background:transparent url(../img/web/puzirek_l_1.png) no-repeat 0 0;
+	}
+	
+	.web_left_puzirek_2{
+		width:260px;
+		height:200px;
+		opacity:0;
+		position:absolute;
+		margin-top:-4em;
+		margin-left:-2em;
+		background:transparent url(../img/web/puzirek_l_2.png) no-repeat 0 0;
+	}
+	
+	.web_left_puzirek_3{
+		width:260px;
+		height:200px;
+		opacity:0;
+		position:absolute;
+		margin-top:-4em;
+		margin-left:-2em;
+		background:transparent url(../img/web/puzirek_l_3.png) no-repeat 0 0;
+	}
+	
+	.web_left_puzirek_4{
+		width:260px;
+		height:200px;
+		opacity:0;
+		position:absolute;
+		margin-top:-4em;
+		margin-left:-2em;
+		background:transparent url(../img/web/puzirek_l_4.png) no-repeat 0 0;
+	}
+	
+.web_left_bottom_volna{
+	width:260px;
+	height:260px;
+	position:absolute;
+	margin-top:10em;
+	margin-left:10em;
+	z-index:-19;
+	background:transparent url(../img/web/volna_left_bottom.png) no-repeat 0 0;
+	border-spacing: 0px;
+}	
+
+.web_left_bottom_zvezda{
+	width:260px;
+	height:260px;
+	position:absolute;
+	margin-top:20em;
+	margin-left:-2em;
+	display:none;
+	z-index:-21;
+	background:transparent url(../img/web/zvezda_left_bottom.png) no-repeat 0 0;
+	border-spacing: 0px;
+}	
+
+.web_left_bottom_rakushka{
+	width:260px;
+	height:260px;
+	position:absolute;
+	margin-top:20em;
+	margin-left:-2em;
+	display:none;
+	z-index:-20;
+	background:transparent url(../img/web/rakushka_left_bottom.png) no-repeat 0 0;
+	border-spacing: 0px;
+}	
+
+.web_left_bottom_shnjaga{
+	width:260px;
+	height:260px;
+	position:absolute;
+	margin-top:20em;
+	margin-left:-2em;
+	display:none;
+	z-index:-22;
+	background:transparent url(../img/web/shnjaga_left_bottom.png) no-repeat 0 0;
+	border-spacing: 0px;
+}	
+
+.web_right_bottom_verevki{
+	width:500px;
+	height:260px;
+	position:absolute;
+	margin-top:15em;
+	margin-left:10em;
+	z-index:-22;
+	background:transparent url(../img/web/verevki_sprava.png) no-repeat 0 0;
+	border-spacing: 0px;
+}
+
+.web_right_bottom_verevki_left{
+	width:500px;
+	height:260px;
+	position:absolute;
+	margin-top:15em;
+	margin-left:10em;
+	z-index:-22;
+	background:transparent url(../img/web/verevki_sprava.png) no-repeat 0 0;
+	border-spacing: 0px;
+}
+
+.web_right_bottom_flazhki{
+	width:260px;
+	height:260px;
+	position:absolute;
+	margin-top:15em;
+	margin-left:10em;
+	z-index:-22;
+	background:transparent url(../img/web/flazhki_sprava.png) no-repeat 0 0;
+	border-spacing: 0px;
+}
+
+.web_right_bottom_flazhki_left{
+	width:260px;
+	height:260px;
+	position:absolute;
+	margin-top:15em;
+	margin-left:10em;
+	z-index:-22;
+	background:transparent url(../img/web/flazhki_sprava.png) no-repeat 0 0;
+	border-spacing: 0px;
+}
+
+.web_right_bottom_kupalnik{
+	width:260px;
+	height:260px;
+	position:absolute;
+	margin-top:16em;
+	margin-left:46em;
+	display:none;
+	z-index:-22;
+	background:transparent url(../img/web/kupalnik.png) no-repeat 0 0;
+	border-spacing: 0px;
+}	
+
+.web_right_bottom_tapki{
+	width:260px;
+	height:260px;
+	position:absolute;
+	margin-top:28em;
+	margin-left:42em;
+	display:none;
+	z-index:-22;
+	background:transparent url(../img/web/tapki.png) no-repeat 0 0;
+	border-spacing: 0px;
+}	
+
+.bgBg{
+	width:100%;
+	height:400px;
+	margin-top:-20em;
+	background:transparent url(../img/web/poloski.png) repeat-x;
+	z-index:-188;
+	position:absolute;
+	display:none;
+}	

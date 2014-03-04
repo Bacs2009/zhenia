@@ -1,0 +1,200 @@
+.bgslider5_center{
+	width:400px;
+	height:600px;
+	position:absolute;
+	z-index:-21;
+	background:transparent url(../img/bgslider5.png) no-repeat 0 0;
+	opacity:1;
+}
+
+.bgslider5_left{
+	width:400px;
+	height:600px;
+	position:absolute;
+	z-index:-21;
+	background:transparent url(../img/contacts/bgslider5_left.png) no-repeat 0 0;
+	opacity:0;
+}
+
+.bgslider5_right{
+	width:400px;
+	height:600px;
+	position:absolute;
+	z-index:-21;
+	background:transparent url(../img/contacts/bgslider5_left.png) no-repeat 0 0;
+	opacity:0;
+}
+
+	.vibro_l_1{
+		width:100px;
+		height:400px;
+		position:absolute;
+		margin-top:5em;
+		margin-left:-6em;
+		z-index:-21;
+		background:transparent url(../img/contacts/vibro_l_1.png) no-repeat 0 0;
+		opacity:0;
+	}
+	
+	.vibro_l_2{
+		width:100px;
+		height:400px;
+		position:absolute;
+		margin-top:5em;
+		margin-left:-11em;
+		z-index:-21;
+		background:transparent url(../img/contacts/vibro_l_2.png) no-repeat 0 0;
+		opacity:0;
+	}
+	
+	.vibro_l_3{
+		width:100px;
+		height:400px;
+		position:absolute;
+		margin-top:3em;
+		margin-left:-19em;
+		z-index:-21;
+		background:transparent url(../img/contacts/vibro_l_3.png) no-repeat 0 0;
+		opacity:0;
+	}
+	
+	.vibro_r_1{
+		width:100px;
+		height:400px;
+		position:absolute;
+		margin-top:5em;
+		margin-left:30em;
+		z-index:-21;
+		background:transparent url(../img/contacts/vibro_r_1.png) no-repeat 0 0;
+		opacity:0;
+	}
+	
+	.vibro_r_2{
+		width:100px;
+		height:400px;
+		position:absolute;
+		margin-top:5em;
+		margin-left:37em;
+		z-index:-21;
+		background:transparent url(../img/contacts/vibro_r_2.png) no-repeat 0 0;
+		opacity:0;
+	}
+	
+	.vibro_r_3{
+		width:100px;
+		height:400px;
+		position:absolute;
+		margin-top:3em;
+		margin-left:43em;
+		z-index:-21;
+		background:transparent url(../img/contacts/vibro_r_3.png) no-repeat 0 0;
+		opacity:0;
+	}
+	
+	.mail_1{
+		width:120px;
+		height:100px;
+		position:absolute;
+		margin-top:8em;
+		margin-left:12em;
+		z-index:-24;
+		background:transparent url(../img/contacts/mail_1.png) no-repeat 0 0;
+		opacity:1;
+	}	
+
+	.mail_2{
+		width:120px;
+		height:100px;
+		position:absolute;
+		margin-top:8em;
+		margin-left:12em;
+		z-index:-24;
+		background:transparent url(../img/contacts/mail_2.png) no-repeat 0 0;
+		opacity:1;
+	}
+	
+	.mail_3{
+		width:120px;
+		height:100px;
+		position:absolute;
+		margin-top:8em;
+		margin-left:12em;
+		z-index:-24;
+		background:transparent url(../img/contacts/mail_3.png) no-repeat 0 0;
+		opacity:1;
+	}
+	
+	.mail_4{
+		width:120px;
+		height:100px;
+		position:absolute;
+		margin-top:8em;
+		margin-left:12em;
+		z-index:-24;
+		background:transparent url(../img/contacts/mail_4.png) no-repeat 0 0;
+		opacity:1;
+	}
+	
+	.mail_5{
+		width:120px;
+		height:100px;
+		position:absolute;
+		margin-top:8em;
+		margin-left:12em;
+		z-index:-24;
+		background:transparent url(../img/contacts/mail_5.png) no-repeat 0 0;
+		opacity:1;
+	}
+	
+	.mail_6{
+		width:120px;
+		height:100px;
+		position:absolute;
+		margin-top:8em;
+		margin-left:12em;
+		z-index:-24;
+		background:transparent url(../img/contacts/mail_6.png) no-repeat 0 0;
+		opacity:1;
+	}
+	
+	.mail_7{
+		width:120px;
+		height:100px;
+		position:absolute;
+		margin-top:8em;
+		margin-left:12em;
+		z-index:-24;
+		background:transparent url(../img/contacts/mail_7.png) no-repeat 0 0;
+		opacity:1;
+	}
+	
+	.mail_8{
+		width:120px;
+		height:100px;
+		position:absolute;
+		margin-top:8em;
+		margin-left:12em;
+		z-index:-24;
+		background:transparent url(../img/contacts/mail_8.png) no-repeat 0 0;
+		opacity:1;
+	}
+	
+	.kolbasa{
+		width:260px;
+		height:300px;
+		position:absolute;
+		margin-top:22em;
+		margin-left:-4em;
+		z-index:-24;
+		display:none;
+	}
+	
+	.top_kolbasa{
+		width:320px;
+		height:300px;
+		position:absolute;
+		margin-top:0em;
+		margin-left:9em;
+		z-index:-24;
+		display:none;
+	}
