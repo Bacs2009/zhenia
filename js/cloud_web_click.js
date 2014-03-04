@@ -27,7 +27,9 @@ $(document).ready(function(){
 			.append('<div class="web_right_bottom_flazhki_left"></div>')
 			.append('<div class="web_right_bottom_tapki"></div>')
 			.append('<div class="web_right_bottom_kupalnik"></div>')
-			.append('<div class="web_right_bottom_verevki_left"></div>');
+			.append('<div class="web_right_bottom_verevki_left"></div>')
+			.append('<div class="back_web" title="Back to Poligraphy"></div>')
+			.append('<div class="next_web" title="Go to About"></div>');
 			for (var i = 1; i < 5; i++) {
 				$(".bgslider").append('<div class="web_right_puzirek_'+i+'"></div>')
 			}
@@ -42,6 +44,18 @@ $(document).ready(function(){
 	$('.header').delegate("a.b", "click", function(){
 		
 	});
+	$(".bgslider").on("mouseover", ".back_web", function(){
+		$(this).effect( "shake", { direction: "left", times: 10, distance: 1}, 500 );
+	});
+	$(".bgslider").on("mouseover", ".next_web", function(){
+		$(this).effect( "shake", { direction: "left", times: 10, distance: 1}, 500 );
+	});
+	$(".bgslider").on("click", ".back_web", function(){
+		location.hash = "#poligraphy";
+	});
+	$(".bgslider").on("click", ".next_web", function(){
+		location.hash = "#about";
+	});
 });
 
 function animateBgsliderWeb(){
@@ -53,6 +67,7 @@ function animateBgsliderWeb(){
 	krugRotate();
 	obruchRotate();
 	$(".bgBg").delay(1000).fadeIn(500);
+	$(".next_web, .back_web").delay(1000).fadeIn();
 	ribka_swim();
 	setTimeout(function() {
 		$(".web_right_etc, .web_left_etc, .web_left_bottom_zvezda, .web_left_bottom_rakushka, .web_left_bottom_shnjaga, .web_right_bottom_kupalnik, .web_right_bottom_tapki").fadeIn();

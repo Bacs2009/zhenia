@@ -42,6 +42,16 @@ $(document).ready(function(){
 			$("#ada").attr({"href":"#index", "class":"b"});
 			history.pushState(null,null,'#poligraphy');
 			t = 0;
+			
+			//Цепляем левые верхние элементы div
+			for (var i = 1; i < 11; i++) {
+				$(".bgslider")
+				.append('<div id="poli_left_top_'+i+'" style="background:transparent url(img/poligraphy/left_top_poli_'+i+'.png) no-repeat 0 0;" class="poli_left_top"></div>')
+				.append('<div id="znak_left_top_'+i+'" style="background:transparent url(img/poligraphy/left_top_znak_'+i+'.png) no-repeat 0 0;" class="poli_left_top"></div>')
+				.append('<div id="kolbasa_left_top_'+i+'" style="z-index:-23; background:transparent url(img/poligraphy/left_top_kolbasa_'+i+'.png) no-repeat 0 0;" class="poli_left_top"></div>')
+				.append('<div class="kvito4ka"></div>')
+				.append('<div class="last"></div>');
+			}
 		}, 1000);
 		setTimeout(function() {
 			sova_eyes();
@@ -51,6 +61,23 @@ $(document).ready(function(){
 			$(".sharik").animate({marginTop:'-40em', marginLeft:'-10em'},20000, "linear");
 			var h = $(window).height() - 420;
 			$(".mjach").animate({top:h},1800, "easeOutBounce");
+			//Появление левых верхних элементов div
+			for (var i = 1; i < 11; i++) {
+				$("#poli_left_top_"+i).delay(i*20).fadeIn(10);
+				$("#poli_left_top_"+(i-1)).fadeOut(10);
+			}
+			setTimeout(function() {
+				for (var i = 1; i < 10; i++) {
+					$("#znak_left_top_"+i).delay(i*20).fadeIn(10);
+					$("#znak_left_top_"+(i-1)).fadeOut(10);
+				}
+				for (var i = 1; i < 13; i++) {
+					$("#kolbasa_left_top_"+i).delay(i*100).fadeIn(10);
+				}
+				$('.kvito4ka').animate({marginLeft:"4.5em", marginTop:"-4.5em"}, 500);
+				kvito4kaRotateCycle();
+				$(".last").fadeIn(2000);
+			}, 1000);
 		}, 2000);
 	});
 	$('.header').delegate("a.b", "click", function(){
@@ -138,4 +165,23 @@ function sharik(){
 function sharik_nitka() {
 	sharik();
 	setTimeout("sharik_nitka()",2000);
+}
+
+function kvito4kaRotateCycle() {
+	kvito4kaRotate();
+	setTimeout("kvito4kaRotateCycle()",1000);
+}
+
+function kvito4kaRotate(){
+	$('.kvito4ka').animate({borderSpacing: -1800}, {
+		step: function(now,fx) {
+		  $(this).css('-webkit-transform','rotate('+now+'deg)');
+		  $(this).css('-moz-transform','rotate('+now+'deg)'); 
+		  $(this).css('-ms-transform','rotate('+now+'deg)');
+		  $(this).css('-o-transform','rotate('+now+'deg)');
+		  $(this).css('transform','rotate('+now+'deg)');  
+		},
+		duration:5000,
+
+	},'linear');
 }

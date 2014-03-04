@@ -11,9 +11,10 @@ function urlCheck() {
 	{
 		t = 1;
 		other();
-	}else if(document.URL.indexOf("/#zvernit") != -1)
+	}else if(document.URL.indexOf("/#poligraphy") != -1)
 	{
-		//$.ajax({url: "zvernit.php",cache: false,beforeSend: function() {$('#mcontent').html('');},success: function(html){$("#mcontent").html(html);}});return false;
+		t = 1;
+		poligraphy();
 	}else if(document.URL.indexOf("/#komentari") != -1)
 	{
 		//$.ajax({url: "komentari.php",cache: false,beforeSend: function() {$('#mcontent').html('');},success: function(html){$("#mcontent").html(html);}});return false;
@@ -266,5 +267,62 @@ function other(){
 	setTimeout(function() {
 		sova_eyes();
 		animateBgslider();
+	}, 2000);
+}
+
+function poligraphy(){
+	$(".bgslider").animate({top:'-150%'},500);
+	$("body, html").css('backgroundImage','none');
+	$("body").css('backgroundColor','#fceabb');
+	$(".bgBg").fadeOut(2000);
+	$(".hi").animate({marginRight:'-300%'},1000);
+	$(".hi_sova").animate({marginRight:'-25px'},1000);
+	$(".hi_sova").append('<div class="eye"></div>');
+	$(".hi_sova").append('<div class="eye1"></div>');
+	$(".hi_sova").append('<div class="eye2"></div>');
+	$(".hi2").fadeOut(200);
+	$(".hi2").css('display','none').delay(2000).empty().append('<img src="img/hi2_sova.png" />').fadeIn(500);
+	
+	$(".hi2").mouseover(function(){
+		$(this).css('cursor','pointer');
+	});
+	$(".hi2").mouseout(function(){
+		$(this).css('cursor','auto');
+	});
+	
+	$("div.znak, div.cloud1, div.cloud2, div.cloud3, div.cloud4, div.cloud5, div.cloud6, div.center").animate({marginLeft:'-5000px'},1000);
+	
+	setTimeout(function() {
+		$(".bgslider")
+		.empty()
+		.css({"background-image":"url(img/bgslider2.png)","width":"900px","height":"630px","left":"15%","right":"15%"})
+		.animate({top:'15%'},500)
+		.append('<div class="car"></div>');
+		//Выхлоп машинки
+		for (var i = 1; i < 6; i++) {
+			$(".car").append('<div class="dim'+i+'"></div>');
+		}	
+		//Шарик и мячик
+		$(".bgslider")
+		.append('<div class="sharik"></div>')
+		.append('<div class="mjach"></div>');
+		//Нитка от шарика
+		$(".sharik")
+		.append('<div class="nitka"></div>')
+		.append('<div class="nitka2"></div>')
+		.append('<div class="nitka3"></div>');
+		
+		$("#ada").attr({"href":"#index", "class":"b"});
+		history.pushState(null,null,'#poligraphy');
+		t = 0;
+	}, 1000);
+	setTimeout(function() {
+		sova_eyes();
+		car_dim();
+		sharik_nitka();
+		$(".car").animate({marginLeft:'40em'},60000, "linear");
+		$(".sharik").animate({marginTop:'-40em', marginLeft:'-10em'},20000, "linear");
+		var h = $(window).height() - 420;
+		$(".mjach").animate({top:h},1800, "easeOutBounce");
 	}, 2000);
 }

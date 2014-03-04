@@ -10,6 +10,7 @@
 <link href="css/style_web.css" rel="stylesheet" type="text/css" />
 <link href="css/style_contacts.css" rel="stylesheet" type="text/css" />
 <link href="css/style_about.css" rel="stylesheet" type="text/css" />
+<link href="css/style_poli.css" rel="stylesheet" type="text/css" />
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 <script src="js/urlCheck.js"></script>

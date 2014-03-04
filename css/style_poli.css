@@ -1,0 +1,31 @@
+.poli_left_top{
+	width:200px;
+	height:200px;
+	position:absolute;
+	margin-top:-9em;
+	margin-left:2em;
+	z-index:-21;
+	display:none;
+}
+
+.kvito4ka{
+	width:55px;
+	height:55px;
+	position:absolute;
+	margin-top:14.5em;
+	margin-left:10.5em;
+	z-index:-22;
+	display:block;
+	background:transparent url(../img/poligraphy/kvito4ka.png) no-repeat 0 0;
+}
+
+.last{
+	width:200px;
+	height:200px;
+	position:absolute;
+	margin-top:-9em;
+	margin-left:2em;
+	z-index:-24;
+	display:none;
+	background:transparent url(../img/poligraphy/left_top_last.png) no-repeat 0 0;
+}

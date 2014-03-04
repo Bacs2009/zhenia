@@ -265,4 +265,34 @@
 	z-index:-188;
 	position:absolute;
 	display:none;
-}	
+}
+
+.back_web{
+	position:absolute;
+	display:none;
+	width:100px;
+	height:80px;
+	background:transparent url(../img/web/back_web.png) no-repeat 0 0;
+	margin-top:1.5em;
+	margin-left:2.5em;
+	z-index:2000;
+}
+
+.back_web:hover{
+	cursor:pointer;
+}
+	
+.next_web{
+	position:absolute;
+	display:none;
+	width:100px;
+	height:80px;
+	background:transparent url(../img/web/next_web.png) no-repeat 0 0;
+	margin-top:1.0em;
+	margin-left:50.5em;
+	z-index:2000;
+}
+
+.next_web:hover{
+	cursor:pointer;
+}
