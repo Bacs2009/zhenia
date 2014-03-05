@@ -61,3 +61,13 @@
 	z-index:-19;
 	display:none;
 }
+
+.poli_right_top{
+	width:250px;
+	height:250px;
+	position:absolute;
+	margin-top:-8em;
+	margin-left:40em;
+	z-index:-21;
+	display:none;
+}

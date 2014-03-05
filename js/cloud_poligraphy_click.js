@@ -49,14 +49,22 @@ $(document).ready(function(){
 				.append('<div id="poli_left_top_'+i+'" style="background:transparent url(img/poligraphy/left_top_poli_'+i+'.png) no-repeat 0 0;" class="poli_left_top"></div>')
 				.append('<div id="znak_left_top_'+i+'" style="background:transparent url(img/poligraphy/left_top_znak_'+i+'.png) no-repeat 0 0;" class="poli_left_top"></div>')
 				.append('<div id="kolbasa_left_top_'+i+'" style="z-index:-23; background:transparent url(img/poligraphy/left_top_kolbasa_'+i+'.png) no-repeat 0 0;" class="poli_left_top"></div>')
-				.append('<div id="poli_left_bottom_'+i+'" style="background:transparent url(img/poligraphy/left_bottom_'+i+'.png) no-repeat 0 0;" class="poli_left_bottom"></div>')
-				.append('<div class="kvito4ka"></div>')
-				.append('<div class="last"></div>');
-			}
+				.append('<div id="poli_left_bottom_'+i+'" style="background:transparent url(img/poligraphy/left_bottom_'+i+'.png) no-repeat 0 0;" class="poli_left_bottom"></div>');
+			}	
+			$(".bgslider")
+			.append('<div class="kvito4ka"></div>')
+			.append('<div class="last"></div>');
+			
 			//Цепляем левые нижние элементы div
 			$(".bgslider")
 			.append('<div class="poli_left_poloski"></div>')
 			.append('<div class="poli_left_obruch"></div>');
+			
+			//Цепляем правые верхние элементы div
+			for (var i = 1; i < 54; i++) {
+				$(".bgslider")
+				.append('<div id="right_top_punktir_'+i+'" style="background:transparent url(img/poligraphy/right_top_punktir_'+i+'.png) no-repeat 0 0;" class="poli_right_top"></div>');
+			}	
 		}, 1000);
 		setTimeout(function() {
 			sova_eyes();
@@ -93,6 +101,12 @@ $(document).ready(function(){
 					$("#poli_left_bottom_"+i).delay(i*120).fadeIn(10);
 				}
 			}, 2000);	
+			
+			//Появление правых верхних элементов div
+			for (var i = 1; i < 53; i++) {
+				$("#right_top_punktir_"+i).delay(i*20).fadeIn(20);
+				$("#right_top_punktir_"+(i-1)).fadeOut(20);
+			}
 		}, 2000);
 	});
 	$('.header').delegate("a.b", "click", function(){
