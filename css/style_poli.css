@@ -3,7 +3,7 @@
 	height:200px;
 	position:absolute;
 	margin-top:-9em;
-	margin-left:2em;
+	margin-left:0em;
 	z-index:-21;
 	display:none;
 }
@@ -24,8 +24,40 @@
 	height:200px;
 	position:absolute;
 	margin-top:-9em;
-	margin-left:2em;
+	margin-left:0em;
 	z-index:-24;
 	display:none;
 	background:transparent url(../img/poligraphy/left_top_last.png) no-repeat 0 0;
+}
+
+.poli_left_poloski{
+	width:200px;
+	height:200px;
+	position:absolute;
+	margin-top:25em;
+	margin-left:0em;
+	z-index:-21;
+	display:none;
+	background:transparent url(../img/poligraphy/left_bottom_poloski.png) no-repeat 0 0;
+}
+
+.poli_left_obruch{
+	width:125px;
+	height:125px;
+	position:absolute;
+	margin-top:15em;
+	margin-left:10em;
+	z-index:-20;
+	display:none;
+	background:transparent url(../img/poligraphy/left_bottom_obruch.png) no-repeat 0 0;
+}
+
+.poli_left_bottom{
+	width:200px;
+	height:200px;
+	position:absolute;
+	margin-top:25em;
+	margin-left:0em;
+	z-index:-19;
+	display:none;
 }

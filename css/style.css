@@ -651,8 +651,8 @@ body{
 .sharik{
 	width:60px;
 	height:130px;
-	margin-top:16em;
-	margin-left:2em;
+	margin-top:20em;
+	margin-left:4em;
 	background:transparent url(../img/sharik.png) no-repeat 0 0;
 	z-index:999999;
 	position:absolute;
