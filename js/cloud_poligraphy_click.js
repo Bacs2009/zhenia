@@ -64,7 +64,22 @@ $(document).ready(function(){
 			for (var i = 1; i < 54; i++) {
 				$(".bgslider")
 				.append('<div id="right_top_punktir_'+i+'" style="background:transparent url(img/poligraphy/right_top_punktir_'+i+'.png) no-repeat 0 0;" class="poli_right_top"></div>');
-			}	
+			}
+			for (var i = 1; i < 14; i++) {
+				$(".bgslider")
+				.append('<div id="right_top_znak_'+i+'" style="z-index:-19; margin-top:-9.5em; background:transparent url(img/poligraphy/right_top_znak_'+i+'.png) no-repeat 0 0;" class="poli_right_top"></div>');
+			}
+			for (var i = 1; i < 4; i++) {
+				$(".bgslider")
+				.append('<div id="right_top_zelen_'+i+'" style="margin-top:-7.5em; background:transparent url(img/poligraphy/right_top_zelen_'+i+'.png) no-repeat 0 0;" class="poli_right_top"></div>');
+			}
+			$(".bgslider")
+			.append('<div class="poli_right_etc"></div>');	
+
+			//Цепляем левые нижние элементы div
+			$(".bgslider")
+			.append('<div class="poli_right_bottom_poloski"></div>');
+			
 		}, 1000);
 		setTimeout(function() {
 			sova_eyes();
@@ -103,10 +118,28 @@ $(document).ready(function(){
 			}, 2000);	
 			
 			//Появление правых верхних элементов div
-			for (var i = 1; i < 53; i++) {
-				$("#right_top_punktir_"+i).delay(i*20).fadeIn(20);
-				$("#right_top_punktir_"+(i-1)).fadeOut(20);
+			for (var i = 1; i < 14; i++) {
+				$("#right_top_znak_"+i).delay(i*20).fadeIn(20);
+				$("#right_top_znak_"+(i-1)).fadeOut(20);
 			}
+			for (var i = 1; i < 4; i++) {
+				$("#right_top_zelen_"+i).delay(i*20).fadeIn(20);
+				$("#right_top_zelen_"+(i-1)).fadeOut(20);
+			}
+			setTimeout(function() {
+				$(".poli_right_etc").fadeIn(2000);
+			}, 1000);
+			setTimeout(function() {
+				for (var i = 1; i < 53; i++) {
+					$("#right_top_punktir_"+i).delay(i*20).fadeIn(20);
+					$("#right_top_punktir_"+(i-1)).fadeOut(20);
+				}
+			}, 1000);
+			
+			//Появление правых нижних элементов div
+			setTimeout(function() {
+				$(".poli_right_bottom_poloski").animate({marginLeft:"44em"}, 1000);
+			}, 1000);
 		}, 2000);
 	});
 	$('.header').delegate("a.b", "click", function(){

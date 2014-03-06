@@ -67,7 +67,29 @@
 	height:250px;
 	position:absolute;
 	margin-top:-8em;
-	margin-left:40em;
+	margin-left:42em;
 	z-index:-21;
 	display:none;
+}
+
+.poli_right_etc{
+	width:250px;
+	height:250px;
+	position:absolute;
+	margin-top:-8em;
+	margin-left:42em;
+	z-index:-21;
+	display:none;
+	background:transparent url(../img/poligraphy/right_top_etc.png) no-repeat 0 0;
+}
+
+.poli_right_bottom_poloski{
+	width:250px;
+	height:400px;
+	position:absolute;
+	margin-top:10em;
+	margin-left:30em;
+	z-index:-21;
+	display:block;
+	background:transparent url(../img/poligraphy/right_bottom_poloski.png) no-repeat 0 0;
 }
