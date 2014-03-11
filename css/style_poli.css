@@ -93,3 +93,24 @@
 	display:block;
 	background:transparent url(../img/poligraphy/right_bottom_poloski.png) no-repeat 0 0;
 }
+
+.poli_right_bottom{
+	width:250px;
+	height:250px;
+	position:absolute;
+	margin-top:10em;
+	margin-left:43em;
+	z-index:-21;
+	display:none;
+}
+
+.poli_right_bottom_kvitka{
+	width:60px;
+	height:60px;
+	position:absolute;
+	margin-top:10em;
+	margin-left:23em;
+	z-index:-18;
+	display:none;
+	background:transparent url(../img/poligraphy/right_bottom_kvitka.png) no-repeat 0 0;
+}

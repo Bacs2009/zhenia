@@ -76,10 +76,15 @@ $(document).ready(function(){
 			$(".bgslider")
 			.append('<div class="poli_right_etc"></div>');	
 
-			//Цепляем левые нижние элементы div
+			//Цепляем правые нижние элементы div
 			$(".bgslider")
-			.append('<div class="poli_right_bottom_poloski"></div>');
+			.append('<div class="poli_right_bottom_poloski"></div>')
+			.append('<div class="poli_right_bottom_kvitka"></div>');
 			
+			for (var i = 1; i < 33; i++) {
+				$(".bgslider")
+				.append('<div id="right_bottom_punktir_'+i+'" style="background:transparent url(img/poligraphy/right_bottom_punktir_'+i+'.png) no-repeat 0 0;" class="poli_right_bottom"></div>');
+			}
 		}, 1000);
 		setTimeout(function() {
 			sova_eyes();
@@ -137,9 +142,16 @@ $(document).ready(function(){
 			}, 1000);
 			
 			//Появление правых нижних элементов div
+			kvitka2Rotate();
 			setTimeout(function() {
 				$(".poli_right_bottom_poloski").animate({marginLeft:"44em"}, 1000);
 			}, 1000);
+			setTimeout(function() {
+				for (var i = 1; i < 33; i++) {
+					$("#right_bottom_punktir_"+i).delay(i*20).fadeIn(20);
+					$("#right_bottom_punktir_"+(i-1)).fadeOut(20);
+				}
+			}, 3000);
 		}, 2000);
 	});
 	$('.header').delegate("a.b", "click", function(){
@@ -250,6 +262,20 @@ function kvito4kaRotate(){
 
 function obRotate(){
 	$('.poli_left_obruch').fadeIn(500).animate({marginLeft:"2em", marginTop:"25em", borderSpacing: -3600}, {
+		step: function(now,fx) {
+		  $(this).css('-webkit-transform','rotate('+now+'deg)');
+		  $(this).css('-moz-transform','rotate('+now+'deg)'); 
+		  $(this).css('-ms-transform','rotate('+now+'deg)');
+		  $(this).css('-o-transform','rotate('+now+'deg)');
+		  $(this).css('transform','rotate('+now+'deg)');  
+		},
+		duration:2000,
+
+	},'linear');
+}
+
+function kvitka2Rotate(){
+	$('.poli_right_bottom_kvitka').fadeIn(500).animate({marginLeft:"53em", marginTop:"17em", borderSpacing: -7200}, {
 		step: function(now,fx) {
 		  $(this).css('-webkit-transform','rotate('+now+'deg)');
 		  $(this).css('-moz-transform','rotate('+now+'deg)'); 
