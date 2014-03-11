@@ -16,7 +16,6 @@ $(document).ready(function(){
 		$(".hi2").mouseout(function(){
 			$(this).css('cursor','auto');
 		});
-		
 		$("div.znak, div.cloud1, div.cloud2, div.cloud3, div.cloud4, div.cloud5, div.cloud6, div.center").animate({marginLeft:'-5000px'},1000);
 		
 		setTimeout(function() {
@@ -80,6 +79,11 @@ $(document).ready(function(){
 			$(".bgslider")
 			.append('<div class="poli_right_bottom_poloski"></div>')
 			.append('<div class="poli_right_bottom_kvitka"></div>');
+			//Цверток меняется по событию hover
+			$(".bgslider").on("mouseover", ".poli_right_bottom_kvitka", function(){
+				kvitka2Rotate(5000, -1800);
+				// $(this).effect( "shake", { direction: "left", times: 10, distance: 1}, 500 );
+			});
 			for (var i = 1; i < 7; i++) {
 				$(".bgslider")
 				.append('<div id="right_bottom_'+i+'" style="background:transparent url(img/poligraphy/right_bottom_'+i+'.png) no-repeat 0 0;" class="poli_right_bottom"></div>');
@@ -145,7 +149,7 @@ $(document).ready(function(){
 			}, 1000);
 			
 			//Появление правых нижних элементов div
-			kvitka2Rotate();
+			kvitka2Rotate(2000, -7200);
 			setTimeout(function() {
 				$(".poli_right_bottom_poloski").animate({marginLeft:"44em"}, 1000);
 			}, 1000);
@@ -280,8 +284,8 @@ function obRotate(){
 	},'linear');
 }
 
-function kvitka2Rotate(){
-	$('.poli_right_bottom_kvitka').fadeIn(500).animate({marginLeft:"53em", marginTop:"17em", borderSpacing: -7200}, {
+function kvitka2Rotate(d, bS){
+	$('.poli_right_bottom_kvitka').fadeIn(500).animate({marginLeft:"53em", marginTop:"17em", zIndex:"7777", borderSpacing:bS}, {
 		step: function(now,fx) {
 		  $(this).css('-webkit-transform','rotate('+now+'deg)');
 		  $(this).css('-moz-transform','rotate('+now+'deg)'); 
@@ -289,7 +293,7 @@ function kvitka2Rotate(){
 		  $(this).css('-o-transform','rotate('+now+'deg)');
 		  $(this).css('transform','rotate('+now+'deg)');  
 		},
-		duration:2000,
+		duration:d,
 
 	},'linear');
 }
