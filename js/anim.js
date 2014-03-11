@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	t = 1;
+	centerAppend();
 	var winwidth = $(window).width();
 	setTimeout(function() {
 		if(winwidth>1200 && winwidth<1350){
@@ -174,6 +175,7 @@ $(document).ready(function(){
 	$(".arrow").mouseleave(function(){
 		$(this).css('background-image','url(img/arrow.png)');
 	});
+	centerFadeIn();
 });	
 
 function hi_start(){
@@ -202,5 +204,18 @@ function hi_start(){
 		$(".hi").css({backgroundImage:'url(../img/hi.png)'});
 	}, 400);
 }
-	
+
+function centerAppend(){
+	for (var i = 1; i < 55; i++) {
+		$("body")
+		.append('<div id="center_'+i+'" style="background:transparent url(img/center/center_'+i+'.png) no-repeat 0 0;" class="center"></div>');
+	}
+}
+
+function centerFadeIn(){
+	for (var i = 1; i < 55; i++) {
+		$("#center_"+i).delay(i*50).fadeIn(100);
+		$("#center_"+(i-1)).fadeOut(100);
+	}
+}
 	

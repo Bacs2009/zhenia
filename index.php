@@ -29,6 +29,11 @@
 <script src="js/jquery.color.js"></script>
 <script src="js/rotate3Di.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
+<script src="js/poligraphy.js"></script>
+<script src="js/websites.js"></script>
+<script src="js/other.js"></script>
+<script src="js/about.js"></script>
+<script src="js/identity.js"></script>
 </head>
 
 <body>

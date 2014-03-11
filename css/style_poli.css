@@ -114,3 +114,33 @@
 	display:none;
 	background:transparent url(../img/poligraphy/right_bottom_kvitka.png) no-repeat 0 0;
 }
+
+.back_poli{
+	position:absolute;
+	display:none;
+	width:100px;
+	height:80px;
+	background:transparent url(../img/web/back_web.png) no-repeat 0 0;
+	margin-top:-6.1em;
+	margin-left:3.8em;
+	z-index:2000;
+}
+
+.back_poli:hover{
+	cursor:pointer;
+}
+	
+.next_poli{
+	position:absolute;
+	display:none;
+	width:100px;
+	height:80px;
+	background:transparent url(../img/web/next_web.png) no-repeat 0 0;
+	margin-top:-6.4em;
+	margin-left:48.5em;
+	z-index:2000;
+}
+
+.next_poli:hover{
+	cursor:pointer;
+}
