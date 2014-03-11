@@ -80,7 +80,10 @@ $(document).ready(function(){
 			$(".bgslider")
 			.append('<div class="poli_right_bottom_poloski"></div>')
 			.append('<div class="poli_right_bottom_kvitka"></div>');
-			
+			for (var i = 1; i < 7; i++) {
+				$(".bgslider")
+				.append('<div id="right_bottom_'+i+'" style="background:transparent url(img/poligraphy/right_bottom_'+i+'.png) no-repeat 0 0;" class="poli_right_bottom"></div>');
+			}
 			for (var i = 1; i < 33; i++) {
 				$(".bgslider")
 				.append('<div id="right_bottom_punktir_'+i+'" style="background:transparent url(img/poligraphy/right_bottom_punktir_'+i+'.png) no-repeat 0 0;" class="poli_right_bottom"></div>');
@@ -150,6 +153,9 @@ $(document).ready(function(){
 				for (var i = 1; i < 33; i++) {
 					$("#right_bottom_punktir_"+i).delay(i*20).fadeIn(20);
 					$("#right_bottom_punktir_"+(i-1)).fadeOut(20);
+				}
+				for (var i = 1; i < 7; i++) {
+					$("#right_bottom_"+i).delay(i*150).fadeIn(100);
 				}
 			}, 3000);
 		}, 2000);
