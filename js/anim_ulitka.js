@@ -1,18 +1,11 @@
 $(document).ready(function(){	
-	function_name2();
+	function_ulitka();
 });
 
-function function_name2() {
-	startHim();
+function function_ulitka() {
+	w = $(window).width();
+	h = $(window).height();
 	go();
-	setTimeout("AnimateRotate(-90, 0)",80000);
-	setTimeout("goUp()", 81000);
-	setTimeout("AnimateRotate(-180, -90)",141000);
-	setTimeout("goLeft()", 142000);
-	setTimeout("AnimateRotate(-270, -180)",222000);
-	setTimeout("goDown()", 223000);
-	setTimeout("AnimateRotate(-360, -270)",283000);
-	setTimeout("function_name2()",284000);
 }
 	
 function startHim(){
@@ -22,39 +15,97 @@ function startHim(){
 }
 
 function go(){
-	var w = '';
-	w = $(window).width();
+	startHim();
 	w = w - 100;
-	$(".ulitka").animate({left:w,marginLeft:"0px"},80000, "linear");
+	$(".ulitka").animate(
+	{
+		left:w,
+		marginLeft:"0px"
+	}, {
+		easing:"linear",
+		duration:80000,
+		complete:function(){
+			var elem = $(".ulitka");
+			$({deg:0}).animate({deg:-90}, {
+				duration: 1000,
+				complete:goUp(),
+				step: function(now){
+					elem.css({
+						transform: "rotate(" + now + "deg)"
+					});
+				}
+			});
+		}
+    });
 }
 
 function goUp(){
-	var h = '';
-	var h = $(window).height();
 	h = h - 138;
-	$(".ulitka").animate({bottom:h,marginTop:"0px"},60000, "linear");
+	$(".ulitka").animate(
+	{
+		bottom:h,
+		marginTop:"0px"
+	}, {
+		easing:"linear",
+		duration:60000,
+		complete:function(){
+			var elem = $(".ulitka");
+			$({deg:-90}).animate({deg:-180}, {
+				duration: 1000,
+				complete:goLeft(),
+				step: function(now){
+					elem.css({
+						transform: "rotate(" + now + "deg)"
+					});
+				}
+			});
+		}
+    });
 }
 
 function goLeft(){
-	$(".ulitka").animate({left:22,marginRight:"0px"},80000, "linear");
+	$(".ulitka").animate(
+	{
+		left:22,
+		marginRight:"0px"
+	}, {
+		easing:"linear",
+		duration:80000,
+		complete:function(){
+			var elem = $(".ulitka");
+			$({deg:-180}).animate({deg:-270}, {
+				duration: 1000,
+				complete:goDown(),
+				step: function(now){
+					elem.css({
+						transform: "rotate(" + now + "deg)"
+					});
+				}
+			});
+		}
+    });
 }
 
 function goDown(){
-	var h = '';
-	h = $(window).height();
 	h = h - 140;
-	$(".ulitka").animate({bottom:-15,marginBottom:"0px"},60000, "linear");
-}
-
-function AnimateRotate(d, itstime){
-    var elem = $(".ulitka");
-
-    $({deg: itstime}).animate({deg: d}, {
-        duration: 1000,
-        step: function(now){
-            elem.css({
-                 transform: "rotate(" + now + "deg)"
-            });
-        }
+	$(".ulitka").animate(
+	{
+		bottom:-15,
+		marginBottom:"0px"
+	}, {
+		easing:"linear",
+		duration:80000,
+		complete:function(){
+			var elem = $(".ulitka");
+			$({deg:-270}).animate({deg:-360}, {
+				duration: 1000,
+				complete:go(),
+				step: function(now){
+					elem.css({
+						transform: "rotate(" + now + "deg)"
+					});
+				}
+			});
+		}
     });
 }

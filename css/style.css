@@ -119,6 +119,7 @@ body{
 	width:600px;
 	margin-top:170px;
 	z-index: 777;
+	display:none;
 }
 
 .portfolio{
@@ -269,7 +270,7 @@ body{
 	width:150px;
 	height:350px;
 	margin:0px auto;
-	margin-top:20%;
+	margin-top:25%;
 	margin-left:260px;
 	opacity:1;
 	position:absolute;

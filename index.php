@@ -29,6 +29,12 @@
 <script src="js/jquery.color.js"></script>
 <script src="js/rotate3Di.js"></script>
 <script src="js/jquery.easing.1.3.js"></script>
+<script src="js/poligraphy.js"></script>
+<script src="js/websites.js"></script>
+<script src="js/other.js"></script>
+<script src="js/about.js"></script>
+<script src="js/identity.js"></script>
+<script src="js/main.js"></script>
 </head>
 
 <body>
@@ -66,12 +72,11 @@
 </div>
 <div class="cloud7"></div>
 
-
-	<div class="znak">
-		<div class="about"></div>
-		<div class="bird"></div>
-		<div class="arrow"></div>
-	</div>
+<div class="znak">
+	<div class="about"></div>
+	<div class="bird"></div>
+	<div class="arrow"></div>
+</div>
 	
 <div class="center">
 	<div class="portfolio" id="portfolio"></div>
