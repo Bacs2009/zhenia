@@ -15,15 +15,18 @@ function urlCheck() {
 	{
 		t = 1;
 		poligraphy();
-	}else if(document.URL.indexOf("/#komentari") != -1)
+	}else if(document.URL.indexOf("/#websites") != -1)
 	{
-		//$.ajax({url: "komentari.php",cache: false,beforeSend: function() {$('#mcontent').html('');},success: function(html){$("#mcontent").html(html);}});return false;
-	}else if(document.URL.indexOf("/#courts") != -1)
+		t = 1;
+		websites();
+	}else if(document.URL.indexOf("/#about") != -1)
 	{
-		//$.ajax({url: "sudy.htm",cache: false,beforeSend: function() {$('#mcontent').html('');},success: function(html){$("#mcontent").html(html);}});return false;
-	}else if(document.URL.indexOf("/#sudova_praktika") != -1)
+		t = 1;
+		about();
+	}else if(document.URL.indexOf("/#identity") != -1)
 	{
-		//$.ajax({url: "sudova_praktika.php",cache: false,beforeSend: function() {$('#mcontent').html('');},success: function(html){$("#mcontent").html(html);}});return false;
+		t = 1;
+		identity();
 	}
 }
 
@@ -165,164 +168,4 @@ function index(){
 	setTimeout(function() {
 		$(".contacts").animate({opacity:'1'},200);
 	}, 5500);
-}
-
-function other(){
-	$(".bgslider").animate({top:'-150%'},500);
-	$("body, html").css('backgroundImage','none');
-	$("body").css('backgroundColor','#f9c0eb');
-	$("body").append('<div class="bgCircle"></div>');
-	$(".hi").animate({marginRight:'-300%'},1000);
-	$(".hi_sova").animate({marginRight:'-25px'},1000);
-	$(".hi_sova").append('<div class="eye"></div>');
-	$(".hi_sova").append('<div class="eye1"></div>');
-	$(".hi_sova").append('<div class="eye2"></div>');
-	$(".hi2").fadeOut(200);
-	$(".hi2").css('display','none').delay(2000).empty().append('<img src="img/hi2_sova.png" />').fadeIn(500);
-	
-	$(".hi2").mouseover(function(){
-		$(this).css('cursor','pointer');
-	});
-	$(".hi2").mouseout(function(){
-		$(this).css('cursor','auto');
-	});
-	
-	$("div.znak, div.cloud1, div.cloud2, div.cloud3, div.cloud4, div.cloud5, div.cloud6, div.center").animate({marginLeft:'-5000px'},1000);
-	
-	setTimeout(function() {
-		$(".bgslider")
-		.empty()
-		.css({"background-image":"url(img/bgslider3.png)","width":"900px","height":"630px","left":"15%","right":"15%"})
-		.animate({top:'15%'},500);
-				
-		$("#ada").attr({"href":"/zhenia", "class":"b"});
-		history.pushState(null,null,'#other');
-		t = 0;
-		//Цепляем левые верхние элементы
-		$(".bgslider")
-		.append('<div class="other_left_top"></div>')
-		.append('<div class="other_left_top_oliva"></div>')
-		.append('<div id="strelka" class="other_left_strelka"></div>')
-		.append('<div id="strelka" class="other_left_strelka_hover"></div>');
-		//Стрелка меняется по событию hover
-		$("#strelka").on('mouseover', function(){
-			$(".other_left_strelka").fadeOut(1000);
-			$(".other_left_strelka_hover").fadeIn(1000);
-			$(this).effect( "shake", { direction: "left", times: 10, distance: 1}, 500 );
-		});
-		$("#strelka").on('mouseout', function(){
-			$(".other_left_strelka_hover").fadeOut(1000);
-			$(".other_left_strelka").fadeIn(1000);
-			$(this).effect( "shake", { direction: "left", times: 10, distance: 1}, 500 );
-		});
-		
-		//Цепляем левые верхние элементы div
-		for (var i = 1; i < 6; i++) {
-			$(".other_left_top").append('<div class="other_left_top_'+i+'"></div>');
-		}
-		//Цепляем правые верхние элементы
-		$(".bgslider")
-		.append('<div class="other_right_top"></div>')
-		.append('<div class="other_right_palka"></div>')
-		.append('<div class="other_right_propeller"></div>')
-		.append('<div id="strelka_right" class="other_right_strelka"></div>')
-		.append('<div id="strelka_right" class="other_right_strelka_hover"></div>');
-		//Стрелка меняется по событию hover
-		$("#strelka_right").on('mouseover', function(){
-			$(".other_right_strelka").fadeOut(1000);
-			$(".other_right_strelka_hover").fadeIn(1000);
-			$(this).effect( "shake", { direction: "left", times: 10, distance: 1}, 500 );
-		});
-		$("#strelka_right").on('mouseout', function(){
-			$(".other_right_strelka_hover").fadeOut(1000);
-			$(".other_right_strelka").fadeIn(1000);
-			$(this).effect( "shake", { direction: "left", times: 10, distance: 1}, 500 );
-		});
-		//Цепляем правые верхние элементы div
-		for (var i = 1; i < 6; i++) {
-			$(".other_right_top").append('<div class="other_right_top_'+i+'"></div>');
-		}
-		
-		//Цепляем правые нижние элементы
-		$(".bgslider")
-		.append('<div class="other_right_bottom"></div>');
-		
-		//Цепляем правые нижние элементы div
-		for (var i = 1; i < 20; i++) {
-			$(".other_right_bottom").append('<div class="other_right_flower_'+i+'"></div>');
-		}
-		//Цепляем левые нижние элементы
-		$(".bgslider")
-		.append('<div class="other_left_bottom"></div>')
-		//Шарик
-		for (var i = 1; i < 7; i++) {
-			$(".bgslider").append('<div class="other_left_sharik_'+i+'"></div>');
-		}
-		//Цепляем левые нижние элементы div
-		for (var i = 1; i < 6; i++) {
-			$(".other_left_bottom").append('<div class="left_bottom_'+i+'"></div>');
-		}
-		
-	}, 1000);
-	setTimeout(function() {
-		sova_eyes();
-		animateBgslider();
-	}, 2000);
-}
-
-function poligraphy(){
-	$(".bgslider").animate({top:'-150%'},500);
-	$("body, html").css('backgroundImage','none');
-	$("body").css('backgroundColor','#fceabb');
-	$(".bgBg").fadeOut(2000);
-	$(".hi").animate({marginRight:'-300%'},1000);
-	$(".hi_sova").animate({marginRight:'-25px'},1000);
-	$(".hi_sova").append('<div class="eye"></div>');
-	$(".hi_sova").append('<div class="eye1"></div>');
-	$(".hi_sova").append('<div class="eye2"></div>');
-	$(".hi2").fadeOut(200);
-	$(".hi2").css('display','none').delay(2000).empty().append('<img src="img/hi2_sova.png" />').fadeIn(500);
-	
-	$(".hi2").mouseover(function(){
-		$(this).css('cursor','pointer');
-	});
-	$(".hi2").mouseout(function(){
-		$(this).css('cursor','auto');
-	});
-	
-	$("div.znak, div.cloud1, div.cloud2, div.cloud3, div.cloud4, div.cloud5, div.cloud6, div.center").animate({marginLeft:'-5000px'},1000);
-	
-	setTimeout(function() {
-		$(".bgslider")
-		.empty()
-		.css({"background-image":"url(img/bgslider2.png)","width":"900px","height":"630px","left":"15%","right":"15%"})
-		.animate({top:'15%'},500)
-		.append('<div class="car"></div>');
-		//Выхлоп машинки
-		for (var i = 1; i < 6; i++) {
-			$(".car").append('<div class="dim'+i+'"></div>');
-		}	
-		//Шарик и мячик
-		$(".bgslider")
-		.append('<div class="sharik"></div>')
-		.append('<div class="mjach"></div>');
-		//Нитка от шарика
-		$(".sharik")
-		.append('<div class="nitka"></div>')
-		.append('<div class="nitka2"></div>')
-		.append('<div class="nitka3"></div>');
-		
-		$("#ada").attr({"href":"#index", "class":"b"});
-		history.pushState(null,null,'#poligraphy');
-		t = 0;
-	}, 1000);
-	setTimeout(function() {
-		sova_eyes();
-		car_dim();
-		sharik_nitka();
-		$(".car").animate({marginLeft:'40em'},60000, "linear");
-		$(".sharik").animate({marginTop:'-40em', marginLeft:'-10em'},20000, "linear");
-		var h = $(window).height() - 420;
-		$(".mjach").animate({top:h},1800, "easeOutBounce");
-	}, 2000);
 }
